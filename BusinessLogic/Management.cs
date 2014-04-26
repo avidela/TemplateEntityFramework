@@ -89,11 +89,11 @@ namespace BusinessLogic
                 {
                     ProyectId = proyectDTO.ProyectId,
                     Name = proyectDTO.Name,
-                    Agents = proyectDTO.Agents.Select(x => new Agent
+                    Agents = proyectDTO.Agents.Select(agentDTO => new Agent
                     {
-                        AgentId =  x.AgentId,
-                        LastName = x.LastName,
-                        Name = x.Name
+                        AgentId =  agentDTO.AgentId,
+                        LastName = agentDTO.LastName,
+                        Name = agentDTO.Name
                     }).ToList()
                 });
                 SaveChanges();
@@ -106,9 +106,9 @@ namespace BusinessLogic
         {
             try
             {
-                var agent = Context.Proyects.FirstOrDefault(x => x.ProyectId == proyectId);
-                if (agent == null) throw new AgentNotFoundException();
-                Context.Proyects.Remove(agent);
+                var proyect = Context.Proyects.FirstOrDefault(x => x.ProyectId == proyectId);
+                if (proyect == null) throw new AgentNotFoundException();
+                Context.Proyects.Remove(proyect);
                 SaveChanges();
                 return new ResultDTO { Success = true };
             }

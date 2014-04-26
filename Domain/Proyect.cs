@@ -14,7 +14,7 @@ namespace Domain
 
         public Proyect()
         {
-            Agents = new List<Agent>();
+           
         }
     }
 }
