@@ -53,6 +53,7 @@ namespace BusinessLogic
                     Name = agent.Name,
                     LastName = agent.LastName
                 });
+                SaveChanges();
                 return new ResultDTO { Success = true };
             }
             catch (Exception ex) { return new ResultDTO { Success = false, Message = ex.Message }; }
@@ -65,6 +66,7 @@ namespace BusinessLogic
                 var agent = Context.Agents.FirstOrDefault(x => x.AgentId == agentId);
                 if (agent == null) throw new AgentNotFoundException();
                 Context.Agents.Remove(agent);
+                SaveChanges();
                 return new ResultDTO { Success = true };
             }
             catch (Exception ex)
@@ -93,6 +95,7 @@ namespace BusinessLogic
                         Name = x.Name
                     }).ToList()
                 });
+                SaveChanges();
                 return new ResultDTO { Success = true };
             }
             catch (Exception ex) { return new ResultDTO { Success = false, Message = ex.Message }; }
@@ -102,9 +105,10 @@ namespace BusinessLogic
         {
             try
             {
-                var proyect = Context.Proyects.FirstOrDefault(x => x.ProyectId == proyectId);
-                if (proyect == null) throw new AgentNotFoundException();
-                Context.Proyects.Remove(proyect);
+                var agent = Context.Proyects.FirstOrDefault(x => x.ProyectId == proyectId);
+                if (agent == null) throw new AgentNotFoundException();
+                Context.Proyects.Remove(agent);
+                SaveChanges();
                 return new ResultDTO { Success = true };
             }
             catch (Exception ex)
@@ -116,6 +120,11 @@ namespace BusinessLogic
                 };
             }
 
+        }
+
+        private void SaveChanges()
+        {
+            Context.SaveChanges();
         }
     }
 }
