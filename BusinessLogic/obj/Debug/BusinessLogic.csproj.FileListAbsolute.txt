@@ -1,0 +1,16 @@
+D:\Git\TemplateEntityFramework\BusinessLogic\bin\Debug\BusinessLogic.dll.config
+D:\Git\TemplateEntityFramework\BusinessLogic\bin\Debug\BusinessLogic.dll
+D:\Git\TemplateEntityFramework\BusinessLogic\bin\Debug\BusinessLogic.pdb
+D:\Git\TemplateEntityFramework\BusinessLogic\bin\Debug\Domain.dll
+D:\Git\TemplateEntityFramework\BusinessLogic\bin\Debug\EntityFramework.dll
+D:\Git\TemplateEntityFramework\BusinessLogic\bin\Debug\EntityFramework.SqlServer.dll
+D:\Git\TemplateEntityFramework\BusinessLogic\bin\Debug\Infrastructure.Data.dll
+D:\Git\TemplateEntityFramework\BusinessLogic\bin\Debug\Presentation.Support.dll
+D:\Git\TemplateEntityFramework\BusinessLogic\bin\Debug\Domain.pdb
+D:\Git\TemplateEntityFramework\BusinessLogic\bin\Debug\Infrastructure.Data.pdb
+D:\Git\TemplateEntityFramework\BusinessLogic\bin\Debug\Presentation.Support.pdb
+D:\Git\TemplateEntityFramework\BusinessLogic\bin\Debug\EntityFramework.xml
+D:\Git\TemplateEntityFramework\BusinessLogic\bin\Debug\EntityFramework.SqlServer.xml
+D:\Git\TemplateEntityFramework\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
+D:\Git\TemplateEntityFramework\BusinessLogic\obj\Debug\BusinessLogic.dll
+D:\Git\TemplateEntityFramework\BusinessLogic\obj\Debug\BusinessLogic.pdb

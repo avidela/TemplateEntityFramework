@@ -6,7 +6,13 @@ namespace Presentation.Console
     {
         static void Main(string[] args)
         {
+            var management = new Management();
+            var agents = management.GetAgents();
 
+            foreach (var agentDTO in agents)
+            {
+                System.Console.WriteLine(agentDTO.Name);
+            }
         }
     }
 }

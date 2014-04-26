@@ -1,50 +1,121 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using BusinessLogic.Exceptions;
 using Domain;
+using Infrastructure.Data;
 using Presentation.Support;
 using Presentation.Support.DTOS;
 
 namespace BusinessLogic
 {
-    public interface IManagement
+    public class Management : IManagement
     {
-        IEnumerable<Agent> GetAgents();
-        IEnumerable<Proyect> GetProyects();
-        ResultDTO AddAgent(AgentDTO agent);
-        ResultDTO RemoveAgent(string agentId);
-        ResultDTO AddProyect(ProyectDTO proyectDTO);
-        ResultDTO RemoveProyect(string proyectId);
-    }
+        private ObjectContext Context { get; set; }
 
-    public class Management :IManagement
-    {
-        public IEnumerable<Agent> GetAgents()
+        public Management()
         {
-            throw new System.NotImplementedException();
+            Context = new ObjectContext();
         }
 
-        public IEnumerable<Proyect> GetProyects()
+        public IEnumerable<AgentDTO> GetAgents()
         {
-            throw new System.NotImplementedException();
+            return Context.Agents.Select(x => new AgentDTO
+                {
+                    AgentId = x.AgentId,
+                    Name = x.Name,
+                    LastName = x.LastName
+                });
+        }
+
+        public IEnumerable<ProyectDTO> GetProyects()
+        {
+            return Context.Proyects.Select(proyect => new ProyectDTO
+            {
+                ProyectId = proyect.ProyectId,
+                Name = proyect.Name,
+                Agents = proyect.Agents.Select(agent => new AgentDTO
+                {
+                    AgentId = agent.AgentId,
+                    Name = agent.Name,
+                    LastName = agent.LastName
+                }).ToList()
+            });
         }
 
         public ResultDTO AddAgent(AgentDTO agent)
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                Context.Agents.Add(new Agent
+                {
+                    AgentId = agent.AgentId,
+                    Name = agent.Name,
+                    LastName = agent.LastName
+                });
+                return new ResultDTO { Success = true };
+            }
+            catch (Exception ex) { return new ResultDTO { Success = false, Message = ex.Message }; }
         }
 
         public ResultDTO RemoveAgent(string agentId)
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                var agent = Context.Agents.FirstOrDefault(x => x.AgentId == agentId);
+                if (agent == null) throw new AgentNotFoundException();
+                Context.Agents.Remove(agent);
+                return new ResultDTO { Success = true };
+            }
+            catch (Exception ex)
+            {
+                return new ResultDTO
+                {
+                    Success = false,
+                    Message = ex.Message
+                };
+            }
+
         }
 
         public ResultDTO AddProyect(ProyectDTO proyectDTO)
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                Context.Proyects.Add(new Proyect
+                {
+                    ProyectId = proyectDTO.ProyectId,
+                    Name = proyectDTO.Name,
+                    Agents = proyectDTO.Agents.Select(x => new Agent
+                    {
+                        AgentId =  x.AgentId,
+                        LastName = x.LastName,
+                        Name = x.Name
+                    }).ToList()
+                });
+                return new ResultDTO { Success = true };
+            }
+            catch (Exception ex) { return new ResultDTO { Success = false, Message = ex.Message }; }
         }
 
         public ResultDTO RemoveProyect(string proyectId)
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                var proyect = Context.Proyects.FirstOrDefault(x => x.ProyectId == proyectId);
+                if (proyect == null) throw new AgentNotFoundException();
+                Context.Proyects.Remove(proyect);
+                return new ResultDTO { Success = true };
+            }
+            catch (Exception ex)
+            {
+                return new ResultDTO
+                {
+                    Success = false,
+                    Message = ex.Message
+                };
+            }
+
         }
     }
 }

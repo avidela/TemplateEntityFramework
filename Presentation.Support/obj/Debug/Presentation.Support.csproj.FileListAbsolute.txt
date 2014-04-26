@@ -1,0 +1,4 @@
+D:\Git\TemplateEntityFramework\Presentation.Support\bin\Debug\Presentation.Support.dll
+D:\Git\TemplateEntityFramework\Presentation.Support\bin\Debug\Presentation.Support.pdb
+D:\Git\TemplateEntityFramework\Presentation.Support\obj\Debug\Presentation.Support.dll
+D:\Git\TemplateEntityFramework\Presentation.Support\obj\Debug\Presentation.Support.pdb

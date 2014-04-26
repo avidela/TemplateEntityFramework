@@ -1,0 +1,12 @@
+D:\Git\TemplateEntityFramework\Infrastructure.Data\bin\Debug\Infrastructure.Data.dll.config
+D:\Git\TemplateEntityFramework\Infrastructure.Data\bin\Debug\Infrastructure.Data.dll
+D:\Git\TemplateEntityFramework\Infrastructure.Data\bin\Debug\Infrastructure.Data.pdb
+D:\Git\TemplateEntityFramework\Infrastructure.Data\bin\Debug\Domain.dll
+D:\Git\TemplateEntityFramework\Infrastructure.Data\bin\Debug\EntityFramework.dll
+D:\Git\TemplateEntityFramework\Infrastructure.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Git\TemplateEntityFramework\Infrastructure.Data\bin\Debug\Domain.pdb
+D:\Git\TemplateEntityFramework\Infrastructure.Data\bin\Debug\EntityFramework.xml
+D:\Git\TemplateEntityFramework\Infrastructure.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Git\TemplateEntityFramework\Infrastructure.Data\obj\Debug\Infrastructure.Data.csprojResolveAssemblyReference.cache
+D:\Git\TemplateEntityFramework\Infrastructure.Data\obj\Debug\Infrastructure.Data.dll
+D:\Git\TemplateEntityFramework\Infrastructure.Data\obj\Debug\Infrastructure.Data.pdb
