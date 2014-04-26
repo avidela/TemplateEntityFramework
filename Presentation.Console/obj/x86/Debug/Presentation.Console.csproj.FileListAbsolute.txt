@@ -1,4 +1,3 @@
-D:\Git\TemplateEntityFramework\Presentation.Console\obj\x86\Debug\Presentation.Console.csprojResolveAssemblyReference.cache
 D:\Git\TemplateEntityFramework\Presentation.Console\bin\Debug\Presentation.Console.exe.config
 D:\Git\TemplateEntityFramework\Presentation.Console\bin\Debug\Presentation.Console.exe
 D:\Git\TemplateEntityFramework\Presentation.Console\bin\Debug\Presentation.Console.pdb
@@ -10,7 +9,10 @@ D:\Git\TemplateEntityFramework\Presentation.Console\bin\Debug\Domain.dll
 D:\Git\TemplateEntityFramework\Presentation.Console\bin\Debug\BusinessLogic.pdb
 D:\Git\TemplateEntityFramework\Presentation.Console\bin\Debug\Presentation.Support.pdb
 D:\Git\TemplateEntityFramework\Presentation.Console\bin\Debug\Infrastructure.Data.pdb
-D:\Git\TemplateEntityFramework\Presentation.Console\bin\Debug\EntityFramework.xml
 D:\Git\TemplateEntityFramework\Presentation.Console\bin\Debug\Domain.pdb
+D:\Git\TemplateEntityFramework\Presentation.Console\obj\x86\Debug\Presentation.Console.csprojResolveAssemblyReference.cache
 D:\Git\TemplateEntityFramework\Presentation.Console\obj\x86\Debug\Presentation.Console.exe
 D:\Git\TemplateEntityFramework\Presentation.Console\obj\x86\Debug\Presentation.Console.pdb
+D:\Git\TemplateEntityFramework\Presentation.Console\bin\Debug\EntityFramework.SqlServer.dll
+D:\Git\TemplateEntityFramework\Presentation.Console\bin\Debug\EntityFramework.xml
+D:\Git\TemplateEntityFramework\Presentation.Console\bin\Debug\EntityFramework.SqlServer.xml

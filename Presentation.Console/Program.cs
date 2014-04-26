@@ -14,7 +14,7 @@ namespace Presentation.Console
                 AgentId = "26514",
                 Name = "John",
                 LastName = "Doe"
-            
+
             });
             management.AddAgent(new AgentDTO
             {
@@ -27,7 +27,7 @@ namespace Presentation.Console
             {
                 ProyectId = "00-01",
                 Name = "Citibank",
-                Agents= management.GetAgents().ToList()
+                Agents = management.GetAgents().ToList()
             });
 
             var agents = management.GetAgents();
@@ -36,6 +36,8 @@ namespace Presentation.Console
             {
                 System.Console.WriteLine(agentDTO.Name);
             }
+
+            System.Console.ReadLine();
         }
     }
 }

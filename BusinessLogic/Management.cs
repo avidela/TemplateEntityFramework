@@ -11,10 +11,11 @@ namespace BusinessLogic
 {
     public class Management : IManagement
     {
-        private ObjectContext Context { get; set; }
+        private static ObjectContext Context { get; set; }
 
         public Management()
         {
+
             Context = new ObjectContext();
         }
 
