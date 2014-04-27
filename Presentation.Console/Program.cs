@@ -1,4 +1,4 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
 using BusinessLogic;
 using Presentation.Support.DTOS;
 
@@ -9,26 +9,31 @@ namespace Presentation.Console
         static void Main(string[] args)
         {
             var management = new Management();
-            management.AddAgent(new AgentDTO
-            {
-                AgentId = "26514",
-                Name = "John",
-                LastName = "Doe"
 
-            });
-            management.AddAgent(new AgentDTO
-            {
-                AgentId = "26515",
-                Name = "Jane",
-                LastName = "Doe"
-
-            });
-            management.AddProyect(new ProyectDTO
+            var result = management.AddProyect(new ProyectDTO
             {
                 ProyectId = "00-01",
                 Name = "Citibank",
-                Agents = management.GetAgents().ToList()
+                Agents = new List<AgentDTO>
+                {
+                    new AgentDTO
+                    {
+                        AgentId = "26514",
+                        Name = "John",
+                        LastName = "Doe"
+
+                    },
+                    new AgentDTO
+                    {
+                        AgentId = "26515",
+                        Name = "Jane",
+                        LastName = "Doe"
+                    }
+                }
             });
+
+            if (!result.Success)
+                System.Console.WriteLine(result.Message);
 
             var agents = management.GetAgents();
 

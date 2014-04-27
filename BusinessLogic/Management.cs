@@ -23,6 +23,7 @@ namespace BusinessLogic
         {
             return Context.Agents.Select(x => new AgentDTO
                 {
+                    Id = x.Id,
                     AgentId = x.AgentId,
                     Name = x.Name,
                     LastName = x.LastName
@@ -37,6 +38,7 @@ namespace BusinessLogic
                 Name = proyect.Name,
                 Agents = proyect.Agents.Select(agent => new AgentDTO
                 {
+                    Id = agent.Id,
                     AgentId = agent.AgentId,
                     Name = agent.Name,
                     LastName = agent.LastName

@@ -14,7 +14,7 @@ namespace Domain
 
         public Proyect()
         {
-           
+            Id = Guid.NewGuid();
         }
     }
 }
